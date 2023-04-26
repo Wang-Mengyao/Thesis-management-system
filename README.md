@@ -1,4 +1,4 @@
-# RoseSci: A Thesis management system
+# RoseSCI: A Thesis management system
 ### 参考
 
 [Swagger UI (y-droid.com)](https://www.y-droid.com/swagger/#/)
