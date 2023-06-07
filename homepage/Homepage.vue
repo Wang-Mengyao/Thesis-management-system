@@ -3,10 +3,10 @@
         <el-container style="height: 100%;">
             <el-aside style="width : 300px; display: flex; flex-direction: column; height: 100%;">
                 <el-header style="height: 10%;" class="aside-header">文献库</el-header>
-                <Menu style="height: 90%;"></Menu>
+                <Menu :currentLib="currentLibrary" @library-selected="updateCurrent" style="height: 90%;"></Menu>
             </el-aside>
             <el-main style="height: 100%;" class="main-content">
-                    <MainContent></MainContent>
+                    <MainContent :currentLib="currentLibrary"></MainContent>
             </el-main>
         </el-container>
     </el-container>
@@ -20,6 +20,26 @@ export default {
     components: {
         Menu,
         MainContent
+    },
+    data() {
+        return {
+            currentLibrary: ''    
+        };
+    },
+    methods: {
+        iniLibrary() {
+            // 在这里初始化主界面所访问的文献库id，取这个人的第一个文献库id就行
+            // TODO
+            
+            return "12347";// 后续需修改此句，返回id
+
+        },
+        updateCurrent(newLibraryId) {
+            this.currentLibrary = newLibraryId;
+        }
+    },
+    created() {
+        this.currentLibrary = this.iniLibrary();
     }
 }
 </script>
