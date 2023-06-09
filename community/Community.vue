@@ -3,11 +3,11 @@
         <el-header class="title">
             RoseSCI
         </el-header>
-        <el-container class="search-area" style="height: 40%;">
+        <el-container class="search-area-for-conmmunity" style="height: 40%;">
             <div class="background-container">
                 <img src="./title.png" alt="your-image-alt" class="background-image" />
             </div>
-            <div class="search-container">
+            <div class="search-container-for-conmmunity">
                 <el-input v-model="searchInput" placeholder="搜索感兴趣的文献库" class="search-input">
                 <el-button slot="append" icon="el-icon-search" @click="search"></el-button>
                 </el-input>
@@ -297,7 +297,7 @@
         padding: 10px;
         z-index: 2;
     }
-    .search-area {
+    .search-area-for-conmmunity {
         background-color: antiquewhite;
 
     }
@@ -327,7 +327,7 @@
         height: 550px;
     }
 
-    .search-container {
+    .search-container-for-conmmunity {
         position: relative;
         z-index: 1;
         left: 550px;
